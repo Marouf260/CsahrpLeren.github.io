@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- CSP: Allow Google Translate resources -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
+    <title>5.2 Polymorphism & Composition | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+        <span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <nav class="sidebar">
+        <a href="../index.html" class="brand">
+            <span>⚡ C# MASTER</span>
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn"
+                onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+
+        </div>
+
+        <!-- 1. C# TUTORIAL -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
+            <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
+            <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
+            <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
+            <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
+            <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
+            <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
+            <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
+            <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
+            <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
+            <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
+            <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
+            <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
+            <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
+            <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
+            <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
+            <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
+            <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
+            <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
+            <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
+            <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method
+                Parameters</a>
+            <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
+                Overloading</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
+            <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
+            <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
+            <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
+            <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
+            <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
+            <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
+            <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
+            <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
+            <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
+            <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
+            <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
+            <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
+            <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
+        </div>
+
+        <!-- 2. ADVANCED INTERNALS (Old Modules) -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
+            <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
+            <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
+            <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
+            <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
+            <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
+            <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_show">Showcase</div>
+            <a href="../projects/portfolio.html" class="nav-link"
+                style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
+                data-i18n="nav_portfolio">🏆
+                Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-container">
+            <h1 data-i18n="adv_module5_2_h1_325">5.2 Polymorphism (Veelvormigheid)</h1>
+            <p class="lead" data-i18n="adv_module5_2_p_330">Eén interface, vele gezichten. Dit is de motor van
+                uitbreidbare software.</p>
+
+            <h2 data-i18n="adv_module5_2_h2_326">Static vs Dynamic Polymorphism</h2>
+
+            <h3 data-i18n="adv_module5_2_h3_328">1. Static (Compile Time) - Overloading</h3>
+            <p data-i18n="adv_module5_2_p_331">De compiler kiest welke methode hij pakt op basis van parameters.</p>
+            <pre><code class="language-csharp">void Print(int i) { ... }
+void Print(string s) { ... } // Zelfde naam, ander contract</code></pre>
+
+            <h3 data-i18n="adv_module5_2_h3_329">2. Dynamic (Runtime) - Overriding</h3>
+            <p data-i18n="adv_module5_2_p_332">De runtime (CLR) kijkt in de <strong>Virtual Method Table
+                    (vtable)</strong> welk type het object
+                <em>echt</em> is.
+            </p>
+            <pre><code class="language-csharp">public virtual void Speak() => Console.WriteLine("...");
+public override void Speak() => Console.WriteLine("Woof!");</code></pre>
+
+            <div class="callout callout-warning">
+                <div class="callout-title" data-i18n="callout_warning">⚠ ⚠️ Performance Cost:</div>Virtual methods zijn
+                iets langzamer dan normale methods omdat de CPU
+                een 'lookup' moet doen (indirection). Meestal verwaarloosbaar, maar goed om te weten.
+            </div>
+
+            <h2 data-i18n="adv_module5_2_h2_327">Composition in de Praktijk</h2>
+            <p data-i18n="adv_module5_2_p_333">In plaats van een diepe hiërarchie:</p>
+            <pre><code class="language-csharp">Vehicle -> Car -> ElectricCar -> Tesla -> ModelS</code></pre>
+            <p data-i18n="adv_module5_2_p_334">Gebruik je componenten:</p>
+            <pre><code class="language-csharp">class Vehicle {
+    public IEngine Engine { get; }
+    public IWheels Wheels { get; }
+    
+    // Injecteer gedrag!
+    public Vehicle(IEngine engine) { Engine = engine; }
+}
+
+var myCar = new Vehicle(new ElectricEngine());</code></pre>
+            <p data-i18n="adv_module5_2_p_335">Nu kun je een `JetEngine` in een auto stoppen zonder een hele nieuwe
+                class te schrijven. Dat is de kracht van
+                Composition.</p>
+
+            <div style="margin-top: 40px;">
+                <a href="module5_1.html" class="nav-link">&larr; Vorige</a>
+                <a href="../projects/bank-system.html" class="nav-link"
+                    style="display: inline-block; background: var(--bg-tertiary); color: var(--text-primary); margin-left: 10px;">Naar
+                    Project: Bank Systeem &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/translate.js?v=210"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/terminal.js"></script>
+
+</body>
+
+</html>

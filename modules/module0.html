@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- CSP: Allow Google Translate resources -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 0: Hardware Basics | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+        <span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <nav class="sidebar">
+        <a href="../index.html" class="brand">
+            <span>⚡ C# MASTER</span>
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn"
+                onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+
+        </div>
+
+        <!-- 1. C# TUTORIAL -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
+            <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
+            <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
+            <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
+            <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
+            <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
+            <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
+            <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
+            <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
+            <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
+            <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
+            <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
+            <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
+            <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
+            <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
+            <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
+            <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
+            <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
+            <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
+            <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
+            <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method
+                Parameters</a>
+            <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
+                Overloading</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
+            <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
+            <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
+            <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
+            <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
+            <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
+            <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
+            <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
+            <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
+            <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
+            <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
+            <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
+            <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
+            <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
+        </div>
+
+        <!-- 2. ADVANCED INTERNALS (Old Modules) -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
+            <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
+            <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
+            <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
+            <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
+            <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
+            <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_show">Showcase</div>
+            <a href="../projects/portfolio.html" class="nav-link"
+                style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
+                data-i18n="nav_portfolio">🏆
+                Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-container">
+            <div style="margin-bottom: 20px;">
+                <a href="../index.html" style="color: var(--text-secondary); font-size: 0.9em;"
+                    data-i18n="nav_back">&larr; Terug naar Home</a>
+            </div>
+
+            <h1 data-i18n="adv_module0_h1_1">Module 0: Hoe Computers Echt Werken</h1>
+            <p class="lead" data-i18n="adv_module0_p_5">Voordat je één regel C# schrijft, moet je begrijpen waar die
+                code leeft.</p>
+
+            <div class="callout callout-warning">
+                <div class="callout-title" data-i18n="callout_warning">⚠ Waarschuwing</div>De meeste tutorials slaan dit
+                over. Wij niet. Als je niet snapt wat
+                "Stack" en "Heap" fysiek zijn, zul je nooit een Senior Developer worden.
+            </div>
+
+            <h2 data-i18n="adv_module0_h2_2">1. De Von Neumann Architectuur</h2>
+            <p data-i18n="adv_module0_p_6">Elke computer die je ooit hebt aangeraakt (je laptop, je telefoon, je slimme
+                koelkast) werkt volgens
+                hetzelfde basisprincipe uit 1945: de <strong>Von Neumann Architectuur</strong>.</p>
+
+            <div
+                style="background: var(--bg-tertiary); padding: 20px; border-radius: 6px; border: 1px solid var(--border); text-align: center; margin: 20px 0;">
+                <pre style="background: transparent; border: none; margin: 0; text-align: left; display: inline-block;">
++---------------------------+          +-------------------------+
+|           CPU             |          |        MEMORY           |
+|  +---------------------+  |          |  (RAM)                  |
+|  | Control Unit (CU)   |  | <======> |  +-------------------+  |
+|  +---------------------+  |          |  | 0x00: Instructie  |  |
+|  +---------------------+  |          |  | 0x01: Data        |  |
+|  | Arithmetic Logic    |  |          |  | ...               |  |
+|  | Unit (ALU)          |  |          |  | 0xFF: Stack/Heap  |  |
+|  +---------------------+  |          |  +-------------------+  |
++---------------------------+          +-------------------------+
+            ^                                      ^
+            |          HUGE BOTTLENECK             |
+            +======================================+
+                        System Bus
+            </pre>
+                <p style="font-size: 0.8em; color: var(--text-secondary); margin-top: 10px;"
+                    data-i18n="adv_module0_p_7">Figuur 1: De CPU haalt data op
+                    uit RAM via de System Bus.</p>
+            </div>
+
+            <p data-i18n="adv_module0_p_8">Er zijn drie hoofdrolspelers:</p>
+            <ol style="margin-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 10px;" data-i18n="adv_module0_li_15"><strong>CPU (The Brain):</strong> Kan
+                    rekenen (1+1) en beslissen (IF x >
+                    0). Het is extreem snel, maar heeft bijna geen geheugen (alleen "Registers").</li>
+                <li style="margin-bottom: 10px;" data-i18n="adv_module0_li_16"><strong>RAM (The Workbench):</strong> Je
+                    werkgeheugen. Alles wat nu draait,
+                    leeft hier. C# objecten leven hier. Het is snel, maar vluchtig (weg als stroom uitvalt).</li>
+                <li style="margin-bottom: 10px;" data-i18n="adv_module0_li_17"><strong>Storage (The Warehouse):</strong>
+                    SSD/HDD. Traag, maar permanent.
+                    Je `Program.cs` file staat hier totdat je hem start.</li>
+            </ol>
+
+            <h2 data-i18n="adv_module0_h2_3">2. De Hartslag: Fetch-Decode-Execute</h2>
+            <p data-i18n="adv_module0_p_9">Je CPU doet eigenlijk maar één ding, miljarden keren per seconde:</p>
+            <ol style="margin-left: 20px;">
+                <li data-i18n="adv_module0_li_18"><strong>Fetch:</strong> Haal de volgende instructie op uit het RAM (op
+                    adres van de
+                    <code>Instruction Pointer</code>).
+                </li>
+                <li data-i18n="adv_module0_li_19"><strong>Decode:</strong> Wat betekent <code>10110010</code>? Ah, het
+                    betekent "Tel 5 op bij Register A".
+                </li>
+                <li data-i18n="adv_module0_li_20"><strong>Execute:</strong> De ALU voert de som uit.</li>
+            </ol>
+
+            <div class="callout callout-info">
+                <div class="callout-title" data-i18n="callout_info">ℹ 💡 Inzicht:</div>C# code (text) wordt gecompileerd
+                naar IL, en de JIT (Just-In-Time) compiler
+                maakt daar machinecode van die precies past in deze cyclus.
+            </div>
+
+            <h2 data-i18n="adv_module0_h2_4">3. Geheugenhiërarchie (Waarom je C# traag kan zijn)</h2>
+            <p data-i18n="adv_module0_p_10">Niet al het geheugen is gelijk. Toegangstijden verschillen enorm:</p>
+
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9em;">
+                <tr style="border-bottom: 2px solid var(--border);">
+                    <th style="text-align: left; padding: 10px;">Locatie</th>
+                    <th style="text-align: left; padding: 10px;">Grootte</th>
+                    <th style="text-align: left; padding: 10px;">Snelheid (Analogie)</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 10px;">CPU Registers</td>
+                    <td style="padding: 10px;">~1 KB</td>
+                    <td style="padding: 10px; color: var(--success);">1 sec (Je hersenen)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 10px;">L1/L2 Cache</td>
+                    <td style="padding: 10px;">MB's</td>
+                    <td style="padding: 10px; color: var(--success);">10 sec (Op je bureau pakken)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 10px;">RAM (Main Memory)</td>
+                    <td style="padding: 10px;">GB's</td>
+                    <td style="padding: 10px; color: var(--warning);">2 min (Naar de bieb lopen)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">SSD / Network</td>
+                    <td style="padding: 10px;">TB's</td>
+                    <td style="padding: 10px; color: var(--danger);">Dagen/Jaren (Een brief naar de maan sturen)</td>
+                </tr>
+            </table>
+
+            <p data-i18n="adv_module0_p_11"><strong>Waarom boeit dit?</strong><br>
+                Als jij in C# een <code>List&lt;Class&gt;</code> maakt, verspreid je data over het RAM. De CPU moet
+                telkens
+                wachten ("naar de bieb lopen"). Als je een <code>Array&lt;Struct&gt;</code> gebruikt, staat alles netjes
+                achter elkaar en past het in de Cache ("op je bureau"). Dit kan je code 100x sneller maken.</p>
+
+            <div class="exercise-box" data-i18n="adv_module0_div_24">
+                <div class="exercise-title" data-i18n="adv_module0_div_25">🧠 Denk-Oefening 0.1</div>
+                <p data-i18n="adv_module0_p_12">Stel, je hebt een programma dat heel vaak data van Disk (SSD) leest.</p>
+                <p data-i18n="adv_module0_p_13"><strong>Vraag:</strong> Waarom helpt een snellere CPU (meer GHz) hier
+                    bijna niet?</p>
+
+                <details>
+                    <summary data-i18n="adv_module0_summary_21">Toon Antwoord</summary>
+                    <p style="margin-top: 10px;" data-i18n="adv_module0_p_14">
+                        Omdat de CPU (nanoseconden) miljarden cycli staat te wachten op de SSD (milliseconden). Dit heet
+                        <strong>I/O Bound</strong> zijn. De bottleneck is niet de rekenkracht, maar de data-toevoer.
+                        Oplossing module 9: Asynchronous programming.
+                    </p>
+                </details>
+            </div>
+
+            <div style="margin-top: 40px; text-align: right;">
+                <a href="module0_2.html" class="nav-link"
+                    style="display: inline-block; background: var(--accent); color: var(--bg-primary); font-weight: bold;">Volgende:
+                    Stack vs Heap &rarr;</a>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="../js/translate.js?v=210"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/terminal.js"></script>
+
+</body>
+
+</html>

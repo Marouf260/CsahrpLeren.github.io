@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- CSP: Allow Google Translate resources -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+        <span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <nav class="sidebar">
+    <a href="../index.html" class="brand">
+        <span>⚡ C# MASTER</span>
+    </a>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
+        <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+        <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+        
+    </div>
+
+    <!-- 1. C# TUTORIAL -->
+    <div class="nav-section">
+        <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
+        <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
+        <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
+        <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
+        <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
+        <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
+        <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
+        <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
+        <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
+        <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
+        <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
+        <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
+        <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
+        <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
+        <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
+        <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
+        <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
+        <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
+        <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
+        <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
+        <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method Parameters</a>
+        <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
+            Overloading</a>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
+        <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
+        <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
+        <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
+        <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
+        <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
+        <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
+        <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
+        <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
+        <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
+        <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
+        <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
+        <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
+        <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
+    </div>
+
+    <!-- 2. ADVANCED INTERNALS (Old Modules) -->
+    <div class="nav-section">
+        <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
+        <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
+        <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
+        <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
+        <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
+        <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
+        <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-title" data-i18n="nav_show">Showcase</div>
+        <a href="../projects/portfolio.html" class="nav-link"
+            style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
+            data-i18n="nav_portfolio">🏆
+            Portfolio</a>
+    </div>
+</nav>
+
+    <main class="main-content"><div class="content-container">
+        <!-- Hero Header -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <span class="badge badge-deep" style="font-size: 1rem; padding: 5px 15px; margin-bottom: 20px;"
+                data-i18n="adv_portfolio_span_477">Classified</span>
+            <h1 style="font-size: 4rem; text-align: center; margin-bottom: 20px;" data-i18n="adv_portfolio_h1_457">
+                Mission Control</h1>
+            <p class="lead" style="margin: 0 auto; text-align: center;" data-i18n="adv_portfolio_p_458_html">
+                Dit zijn de 5 "Boss Battles". Voltooi deze projecten om je <span style="color: var(--accent);">Senior
+                    Status</span> te verdienen.
+            </p>
+        </div>
+
+        <div class="project-grid">
+
+            <!-- Project 1 -->
+            <div class="exercise-box" style="border-top: 4px solid var(--accent);">
+                <div class="exercise-title" data-i18n="adv_portfolio_h3_468_html">
+                    <span style="font-size: 1.5rem;">💻</span> 1. The CLI Tool
+                </div>
+                <p data-i18n="adv_portfolio_p_459">Elke pro bouwt zijn eigen tools. Maak een `git`-kloon of een
+                    file-processor.</p>
+                <div
+                    style="margin: 15px 0; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px;">
+                    > mytool --verbose -o result.txt
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <span class="badge" data-i18n="adv_portfolio_span_478">Args Parsing</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_479">System.IO</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_480">Colors</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="exercise-box" style="border-top: 4px solid var(--success);">
+                <div class="exercise-title" data-i18n="adv_portfolio_h3_470_html">
+                    <span style="font-size: 1.5rem;">📂</span> 2. Virtual File System
+                </div>
+                <p data-i18n="adv_portfolio_p_460">Snap je recursie echt? Bouw een boomstructuur van mappen en bestanden
+                    in het geheugen.</p>
+                <div style="margin: 15px 0;">
+                    <code style="display: block;">class Node { List&lt;Node&gt; Children; }</code>
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <span class="badge" data-i18n="adv_portfolio_span_481">Recursion</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_482">Trees</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_483">Composite Pattern</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="exercise-box" style="border-top: 4px solid var(--warning);">
+                <div class="exercise-title" data-i18n="adv_portfolio_h3_472_html">
+                    <span style="font-size: 1.5rem;">🌐</span> 3. API Integrator
+                </div>
+                <p data-i18n="adv_portfolio_p_461">De echte wereld draait op API's. Haal data op (Crypto/Weer) en
+                    verwerk het.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <span class="badge" data-i18n="adv_portfolio_span_484">HttpClient</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_485">JSON</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_486">Async/Await</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="exercise-box" style="border-top: 4px solid #f472b6;">
+                <div class="exercise-title" data-i18n="adv_portfolio_h3_474_html">
+                    <span style="font-size: 1.5rem;">⚔️</span> 4. RPG Engine
+                </div>
+                <p data-i18n="adv_portfolio_p_462">OOP op zijn best. Classes, Inheritance, Polymorphism en State
+                    Management.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <span class="badge" data-i18n="adv_portfolio_span_487">Polymorphism</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_488">Game Loop</span>
+                    <span class="badge" data-i18n="adv_portfolio_span_489">State Pattern</span>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="exercise-box"
+                style="grid-column: 1 / -1; border: 2px solid var(--danger); background: linear-gradient(145deg, rgba(239,68,68,0.05), rgba(0,0,0,0.4));">
+                <div class="exercise-title" style="font-size: 2rem; color: var(--danger);"
+                    data-i18n="adv_portfolio_h3_476_html">
+                    🔥 5. The Mini Framework
+                </div>
+                <p style="font-size: 1.2rem;" data-i18n="adv_portfolio_p_463_html">De ultieme test. Bouw je eigen Unit
+                    Test
+                    runner of Dependency Injection
+                    container.</p>
+                <ul>
+                    <li data-i18n="adv_portfolio_li_464_html">Scan je assembly met <strong>Reflection</strong>.</li>
+                    <li data-i18n="adv_portfolio_li_465_html">Vind methods met jouw eigen `[MyTest]` attribute.</li>
+                    <li data-i18n="adv_portfolio_li_466_html">Voer ze uit en vang exceptions op.</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="action-link" style="background: var(--danger);"
+                        data-i18n="btn_final_challenge">Start The Final Challenge</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div></main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/terminal.js"></script> <!-- New Terminal Script -->
+    <script src="../js/translate.js?v=210"></script>
+</body>
+
+</html>

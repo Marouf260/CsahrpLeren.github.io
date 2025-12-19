@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- CSP: Allow Google Translate resources -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 Value vs Reference | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+        <span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <nav class="sidebar">
+        <a href="../index.html" class="brand">
+            <span>⚡ C# MASTER</span>
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn"
+                onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+
+        </div>
+
+        <!-- 1. C# TUTORIAL -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
+            <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
+            <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
+            <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
+            <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
+            <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
+            <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
+            <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
+            <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
+            <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
+            <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
+            <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
+            <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
+            <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
+            <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
+            <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
+            <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
+            <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
+            <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
+            <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
+            <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method
+                Parameters</a>
+            <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
+                Overloading</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
+            <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
+            <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
+            <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
+            <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
+            <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
+            <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
+            <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
+            <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
+            <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
+            <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
+            <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
+            <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
+            <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
+        </div>
+
+        <!-- 2. ADVANCED INTERNALS (Old Modules) -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
+            <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
+            <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
+            <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
+            <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
+            <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
+            <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_show">Showcase</div>
+            <a href="../projects/portfolio.html" class="nav-link"
+                style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
+                data-i18n="nav_portfolio">🏆
+                Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-container">
+            <h1 data-i18n="adv_module2_1_h1_209">2.1 Value Types vs Reference Types</h1>
+            <p class="lead" data-i18n="adv_module2_1_p_216">De fundamentele tweedeling in C#. Dit bepaalt waar je data
+                leeft (Stack of Heap) en hoe het zich
+                gedraagt bij kopiëren.</p>
+
+            <h2 data-i18n="adv_module2_1_h2_210">De Twee Categorieën</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+                <div class="callout callout-success">
+                    <div class="callout-title" data-i18n="callout_success">✅ Success</div>
+                    <h3 data-i18n="adv_module2_1_h3_214">📦 Value Types</h3>
+                    <ul>
+                        <li data-i18n="adv_module2_1_li_220"><strong>Wat:</strong> Primitives (`int`, `bool`, `double`),
+                            `struct`, `enum`.</li>
+                        <li data-i18n="adv_module2_1_li_221"><strong>Gedrag:</strong> Bevat direct de data.</li>
+                        <li data-i18n="adv_module2_1_li_222"><strong>Kopiëren:</strong> Kopieert de <em>waarde</em>.
+                        </li>
+                        <li data-i18n="adv_module2_1_li_223"><strong>Locatie:</strong> Stack (meestal).</li>
+                    </ul>
+                </div>
+                <div class="callout callout-warning">
+                    <div class="callout-title" data-i18n="callout_warning">⚠ Warning</div>
+                    <h3 data-i18n="adv_module2_1_h3_215">🏷️ Reference Types</h3>
+                    <ul>
+                        <li data-i18n="adv_module2_1_li_224"><strong>Wat:</strong> `class`, `interface`, `string`,
+                            `delegate`, `array`, `record`.</li>
+                        <li data-i18n="adv_module2_1_li_225"><strong>Gedrag:</strong> Bevat een <em>adres</em> (pointer)
+                            naar de data.</li>
+                        <li data-i18n="adv_module2_1_li_226"><strong>Kopiëren:</strong> Kopieert het <em>adres</em>
+                            (niet het object!).</li>
+                        <li data-i18n="adv_module2_1_li_227"><strong>Locatie:</strong> Heap (altijd).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 data-i18n="adv_module2_1_h2_211">Het Kopieer-Gedrag (Demo)</h2>
+            <p data-i18n="adv_module2_1_p_217">Dit is waar bugs ontstaan. Kijk goed naar het verschil:</p>
+
+            <pre><code class="language-csharp">// --- VALUE TYPE (int) ---
+int x = 10;
+int y = x;  // Kopieert de waarde 10
+y = 20;     // y is nu 20, x blijft 10!
+// Resultaat: x=10, y=20 (Veilig, onafhankelijk)
+
+// --- REFERENCE TYPE (List) ---
+List<int> a = new List<int> { 1 };
+List<int> b = a; // Kopieert de POINTER (het adres 0x123)
+b.Add(2);        // We voegen toe via b...
+// Resultaat: a heeft nu OOK 2 items! Want a en b wijzen naar hetzelfde huis.</code></pre>
+
+            <div class="callout callout-danger">
+                <div class="callout-title" data-i18n="callout_error">❌ Valkuil:</div>Als je een object doorgeeft aan een
+                methode, geeft je de
+                <em>afstandsbediening</em> door, niet het object. De methode kan jouw object dus aanpassen!
+            </div>
+
+            <h2 data-i18n="adv_module2_1_h2_212">Wanneer kies je wat?</h2>
+            <p data-i18n="adv_module2_1_p_218">Microsoft heeft richtlijnen ("Guidelines"):</p>
+            <ul>
+                <li data-i18n="adv_module2_1_li_228">Gebruik <strong>Class (Ref Type)</strong> voor bijna alles:
+                    Entiteiten, Business Logic, Services.</li>
+                <li data-i18n="adv_module2_1_li_229">Gebruik <strong>Struct (Value Type)</strong> alleen als:
+                    <ul>
+                        <li data-i18n="adv_module2_1_li_230">Het object klein is (< 16 bytes).</li>
+                        <li data-i18n="adv_module2_1_li_231">Het onveranderlijk (immutable) is.</li>
+                        <li data-i18n="adv_module2_1_li_232">Het logisch gezien een "waarde" is (zoals
+                            <code>Point</code>, <code>Color</code>,
+                            <code>ComplexNumber</code>).
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 data-i18n="adv_module2_1_h2_213">Deep Dive: `ref` keyword</h2>
+            <p data-i18n="adv_module2_1_p_219">Je kunt dit gedrag manipuleren met keywords zoals <code>ref</code>,
+                <code>in</code>, en <code>out</code>.
+                Hiermee kun je Value Types <em>toch</em> by reference doorgeven (voor performance, om kopieën te
+                voorkomen).
+            </p>
+
+            <div style="margin-top: 40px; display: flex; justify-content: space-between;">
+                <a href="module2.html" class="nav-link">&larr; Terug</a>
+                <a href="module2_2.html" class="nav-link"
+                    style="background: var(--accent); color: var(--bg-primary); font-weight: bold;">Volgende: Struct vs
+                    Class &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="../js/translate.js?v=210"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/terminal.js"></script>
+
+</body>
+
+</html>

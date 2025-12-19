@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- CSP: Allow Google Translate resources -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.1: Het .NET Ecosysteem | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+        <span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <nav class="sidebar">
+        <a href="../index.html" class="brand">
+            <span>⚡ C# MASTER</span>
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn"
+                onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+
+        </div>
+
+        <!-- 1. C# TUTORIAL -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
+            <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
+            <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
+            <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
+            <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
+            <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
+            <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
+            <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
+            <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
+            <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
+            <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
+            <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
+            <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
+            <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
+            <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
+            <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
+            <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
+            <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
+            <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
+            <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
+            <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method
+                Parameters</a>
+            <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
+                Overloading</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
+            <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
+            <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
+            <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
+            <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
+            <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
+            <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
+            <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
+            <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
+            <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
+            <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
+            <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
+            <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
+            <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
+        </div>
+
+        <!-- 2. ADVANCED INTERNALS (Old Modules) -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
+            <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
+            <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
+            <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
+            <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
+            <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
+            <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_show">Showcase</div>
+            <a href="../projects/portfolio.html" class="nav-link"
+                style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
+                data-i18n="nav_portfolio">🏆
+                Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-container">
+            <h1 data-i18n="adv_module1_h1_87">1.1 Het .NET Ecosysteem</h1>
+            <p class="lead" data-i18n="adv_module1_p_93">C# is de taal. .NET is de wereld waarin het leeft.</p>
+
+            <h2 data-i18n="adv_module1_h2_88">SDK vs Runtime</h2>
+            <p data-i18n="adv_module1_p_94">Als je begint met C#, download je vaak de SDK. Maar wat is het verschil?</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+                <div class="callout callout-info">
+                    <div class="callout-title" data-i18n="callout_info">ℹ Info</div>
+                    <h3 data-i18n="adv_module1_h3_91">🛠️ SDK (Software Development Kit)</h3>
+                    <p data-i18n="adv_module1_p_95">Dit heb <strong>JIJ</strong> nodig om te bouwen.</p>
+                    <ul>
+                        <li data-i18n="adv_module1_li_100">Bevat de compiler (Roslyn).</li>
+                        <li data-i18n="adv_module1_li_101">Bevat `dotnet` CLI tools.</li>
+                        <li data-i18n="adv_module1_li_102">Bevat de Runtime.</li>
+                    </ul>
+                </div>
+                <div class="callout callout-warning">
+                    <div class="callout-title" data-i18n="callout_warning">⚠ Warning</div>
+                    <h3 data-i18n="adv_module1_h3_92">🏃 Runtime</h3>
+                    <p data-i18n="adv_module1_p_96">Dit heeft de <strong>GEBRUIKER</strong> nodig.</p>
+                    <ul>
+                        <li data-i18n="adv_module1_li_103">Alleen de CLR (Virtual Machine).</li>
+                        <li data-i18n="adv_module1_li_104">Geen tools, alleen uitvoeren.</li>
+                        <li data-i18n="adv_module1_li_105">Veel kleiner.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 data-i18n="adv_module1_h2_89">De grote verwarring: .NET Framework vs Core vs 5+</h2>
+            <p data-i18n="adv_module1_p_97">Er was ooit chaos. Hier is de historie in 3 regels:</p>
+            <ul>
+                <li data-i18n="adv_module1_li_106"><strong>.NET Framework (4.8 en ouder):</strong> Oude Windows-only
+                    versie. Legacy. Niet meer leren.</li>
+                <li data-i18n="adv_module1_li_107"><strong>.NET Core (1.0 - 3.1):</strong> De herschrijving.
+                    Cross-platform (Linux/Mac). Open Source.</li>
+                <li data-i18n="adv_module1_li_108"><strong>.NET 5, 6, 7, 8+:</strong> De samensmelting. "Core" is uit de
+                    naam gevallen. Dit is de toekomst.
+                </li>
+            </ul>
+
+            <div class="callout callout-danger">
+                <div class="callout-title" data-i18n="callout_error">❌ Valkuil:</div>Als je online zoekt, vind je vaak
+                code voor ".NET Framework". Pas op met oudere
+                StackOverflow antwoorden (pre-2019). Classes zoals `WebClient` zijn verouderd; gebruik `HttpClient`.
+            </div>
+
+            <h2 data-i18n="adv_module1_h2_90">Standard Libraries (BCL)</h2>
+            <p data-i18n="adv_module1_p_98">C# komt met een gigantische bibliotheek: de <strong>Base Class Library
+                    (BCL)</strong>. Dit zijn duizenden
+                classes die Microsoft al voor je heeft geschreven (`System.Console`, `System.IO.File`, `System.Linq`).
+            </p>
+            <p data-i18n="adv_module1_p_99">Wij gaan deze libraries niet alleen gebruiken, we gaan snappen hoe ze
+                werken.</p>
+
+            <div style="margin-top: 40px; display: flex; justify-content: space-between;">
+                <a href="../modules/module0_4.html" class="nav-link">&larr; Module 0</a>
+                <a href="module1_2.html" class="nav-link"
+                    style="background: var(--accent); color: var(--bg-primary); font-weight: bold;">Volgende: IL & JIT
+                    &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="../js/translate.js?v=210"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/terminal.js"></script>
+
+</body>
+
+</html>
