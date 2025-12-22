@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 26: Joke Generator | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+</head>
+
+<body>
+    <button class='menu-toggle' onclick='toggleMobileMenu()' aria-label='Toggle Menu'>
+        <span></span>
+    </button>
+    <div class='sidebar-overlay'></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <nav class="sidebar">
+        <a href="../index.html" class="brand"><span>⚡ C# MASTER</span></a>
+        <div class="nav-section">
+            <div class="nav-title">Projecten</div>
+            <a href="../project.html" class="nav-link">&larr; Terug</a>
+            <a href="#" class="nav-link active">26. Joke Generator</a>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="hero-container">
+            <h1 class="glitch" data-text="Project 26: Joke Generator">Project 26: Joke Generator</h1>
+            <p class="lead">Humor on demand. Jouw eerste API call.</p>
+        </div>
+        <div class="content-container">
+            <div class="exercise-box">
+                <h2>🎯 De Uitdaging</h2>
+                <p>Maak een console app die een willekeurige mop ophaalt van een publieke API en deze toont aan de
+                    gebruiker.</p>
+                <p>Gebruik deze URL: <code>https://official-joke-api.appspot.com/random_joke</code></p>
+            </div>
+
+            <div class="theory-box"
+                style="margin-top: 30px; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 8px;">
+                <h3>📘 HttpClient</h3>
+                <ul>
+                    <li>Vergeet niet: <code>Properties</code> in je class moeten exact matchen met de JSON keys (bijv.
+                        "setup" en "punchline").</li>
+                    <li>Gebruik <code>async Task Main()</code> om <code>await</code> te kunnen gebruiken.</li>
+                </ul>
+            </div>
+
+            <h2 style="margin-top: 40px;">🎯 Structuur Hint</h2>
+            <div class="code-block">
+                <pre><code class="language-csharp">using System.Net.Http;
+using System.Text.Json;
+
+public class Joke 
+{
+    public string setup { get; set; }
+    public string punchline { get; set; }
+}
+
+// In Main:
+using HttpClient client = new HttpClient();
+string json = await client.GetStringAsync("https://official-joke-api.appspot.com/random_joke");
+Joke j = JsonSerializer.Deserialize<Joke>(json);
+
+Console.WriteLine(j.setup);
+Console.ReadLine(); // Wacht voor effect...
+Console.WriteLine(j.punchline);</code></pre>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src='../js/main.js'></script>
+    <script src='../js/translate.js?v=210'></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

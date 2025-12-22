@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -7,17 +7,50 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C# Constructors | C# Masterclass</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/premium.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
 </head>
 
 <body>
@@ -32,98 +65,113 @@
 
     <div id="google_translate_element" style="display:none;"></div>
     <nav class="sidebar">
-    <a href="../index.html" class="brand">
-        <span>⚡ C# MASTER</span>
-    </a>
+        <a href="../index.html" class="brand">
+            <span>⚡ C# MASTER</span>
+        </a>
 
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
-        <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
-        <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button>
+            <button class="lang-btn" onclick="changeLanguage('zh')" title="Chinese">🇨🇳</button>
+            <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+        </div>
+
+        <!-- 1. C# TUTORIAL -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
+            <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
+            <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
+            <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
+            <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
+            <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
+            <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
+            <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
+            <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
+            <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
+            <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
+            <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
+            <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
+            <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
+            <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
+            <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
+            <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
+            <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
+            <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
+            <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
+            <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method
+                Parameters</a>
+            <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
+                Overloading</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
+            <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
+            <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
+            <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
+            <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
+            <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
+            <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
+            <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
+            <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
+            <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
+            <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
+            <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
+            <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
+            <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_data">Data & APIs</div>
+            <a href="../tutorial/json.html" class="nav-link" data-i18n="nav_json">JSON</a>
+            <a href="../tutorial/api.html" class="nav-link" data-i18n="nav_api">Web APIs</a>
+        </div>
+
+        <!-- 2. ADVANCED INTERNALS (Old Modules) -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
+            <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
+            <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
+            <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
+            <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
+            <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
+            <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
+        </div>
+
         
-    </div>
+        <div class="nav-section">
+            <div class="nav-title">Oefenen</div>
+            <a href="../project.html" class="nav-link" style="color: #fbbf24; font-weight: bold;">⚡ 30 Projecten</a>
+        </div>
+<div class="nav-section">
+            <div class="nav-title" data-i18n="nav_show">Showcase</div>
+            <a href="../projects/portfolio.html" class="nav-link"
+                style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
+                data-i18n="nav_portfolio">🏆 Portfolio</a>
+        </div>
+    </nav>
 
-    <!-- 1. C# TUTORIAL -->
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
-        <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
-        <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
-        <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
-        <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
-        <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
-    </div>
+    <main class="main-content">
+        <div class="content-container">
+            <h1 data-i18n="tut_constructors_h1_1">C# Constructors</h1>
+            <p class="lead" data-i18n="tut_constructors_p_2">Een speciale methode die draait zodra je <code>new</code>
+                roept.</p>
 
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
-        <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
-        <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
-        <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
-        <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
-        <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
-        <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
-        <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
-        <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
-        <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
-        <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
-        <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
-        <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
-        <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
-        <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
-    </div>
-
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
-        <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
-        <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method Parameters</a>
-        <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
-            Overloading</a>
-    </div>
-
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
-        <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
-        <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
-        <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
-        <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
-        <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
-        <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
-        <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
-        <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
-        <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
-        <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
-        <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
-        <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
-        <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
-    </div>
-
-    <!-- 2. ADVANCED INTERNALS (Old Modules) -->
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
-        <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
-        <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
-        <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
-        <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
-        <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
-        <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
-    </div>
-
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_show">Showcase</div>
-        <a href="../projects/portfolio.html" class="nav-link"
-            style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
-            data-i18n="nav_portfolio">🏆
-            Portfolio</a>
-    </div>
-</nav>
-
-    <main class="main-content"><div class="content-container">
-        <h1   data-i18n="tut_constructors_h1_1">C# Constructors</h1>
-        <p   class="lead" data-i18n="tut_constructors_p_2">Een speciale methode die draait zodra je <code>new</code> roept.</p>
-
-        <h2   data-i18n="tut_constructors_h2_3">Waarom?</h2>
-        <p   data-i18n="tut_constructors_p_4">Om een object direct correct in te stellen. Zonder constructor is een object "leeg".</p>
-        <pre><code class="language-csharp">class Auto 
+            <h2 data-i18n="tut_constructors_h2_3">Waarom?</h2>
+            <p data-i18n="tut_constructors_p_4">Om een object direct correct in te stellen. Zonder constructor is een
+                object "leeg".</p>
+            <pre><code class="language-csharp">class Auto 
 {
     public string model;
 
@@ -137,9 +185,9 @@
 // Nu MOET je een naam geven
 Auto mijnAuto = new Auto("Tesla");</code></pre>
 
-        <h2 data-i18n="tut_constructors_h2_31">Constructor Overloading</h2>
-        <p data-i18n="tut_constructors_p_32">Net als methodes kun je meerdere constructors hebben.</p>
-        <pre><code class="language-csharp">public Auto() // Lege constructor
+            <h2 data-i18n="tut_constructors_h2_31">Constructor Overloading</h2>
+            <p data-i18n="tut_constructors_p_32">Net als methodes kun je meerdere constructors hebben.</p>
+            <pre><code class="language-csharp">public Auto() // Lege constructor
 {
     model = "Onbekend";
 }
@@ -149,13 +197,58 @@ public Auto(string naam) // Constructor met parameter
     model = naam;
 }</code></pre>
 
-        <div style="margin-top: 40px; display: flex; justify-content: space-between;">
-            <a href="class_members.html" class="nav-link">&larr; Class Members</a>
-            <a href="modifiers.html" class="nav-link"
-                style="background: var(--accent); color: var(--bg-primary); font-weight: bold;">Access Modifiers
-                &rarr;</a>
+
+            <!-- NEW CONTENT: Deep Dive -->
+            <h2 data-i18n="tut_constructors_deep_dive_title">Deep Dive: Constructor Chaining (`: this()`)</h2>
+            <p data-i18n="tut_constructors_deep_dive_text">
+                Heb je meerdere constructors en wil je dubbele code voorkomen? Laat de ene constructor de andere
+                aanroepen.
+            </p>
+            <pre><code class="language-csharp">public Auto() : this("Onbekend") 
+{
+    // Roept eerst de constructor hieronder aan
+}
+
+public Auto(string naam) 
+{
+    model = naam;
+}</code></pre>
+
+            <!-- NEW CONTENT: Extra Assignment -->
+            <div class="exercise-box" style="border-color: var(--accent); margin-top: 20px;">
+                <div class="exercise-title" data-i18n="tut_constructors_extra_task_title">🎯 Extra Challenge: Robot
+                    Fabriek</div>
+                <p data-i18n="tut_constructors_extra_task_text">
+                    Maak een class `Robot`.
+                    <br>Verplicht in de constructor: geef hem een `Naam` (string) en `BatterijNiveau` (int).
+                    <br>Maak een Robot "Henk" met 100% batterij.
+                </p>
+                <details>
+                    <summary data-i18n="tut_constructors_summary_extra">Toon Antwoord</summary>
+                    <pre><code class="language-csharp">class Robot 
+{
+    public string Naam;
+    public int Batterij;
+
+    public Robot(string naam, int batterij) 
+    {
+        Naam = naam;
+        Batterij = batterij;
+    }
+}
+
+Robot r = new Robot("Henk", 100);</code></pre>
+                </details>
+            </div>
+
+            <div style="margin-top: 40px; display: flex; justify-content: space-between;">
+                <a href="class_members.html" class="nav-link">&larr; Class Members</a>
+                <a href="modifiers.html" class="nav-link"
+                    style="background: var(--accent); color: var(--bg-primary); font-weight: bold;">Access Modifiers
+                    &rarr;</a>
+            </div>
         </div>
-    </div></main>
+    </main>
 
     <script src="../js/translate.js?v=210"></script>
     <script src="../js/main.js"></script>
@@ -163,6 +256,7 @@ public Auto(string naam) // Constructor met parameter
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="../js/animations.js"></script>
 </body>
 
 </html>

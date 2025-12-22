@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -18,6 +18,36 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
 </head>
 
 <body>
@@ -38,11 +68,12 @@
 
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
-        <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
-        <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
-        
-    </div>
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button>
+            <button class="lang-btn" onclick="changeLanguage('zh')" title="Chinese">🇨🇳</button>
+            <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+        </div>
 
     <!-- 1. C# TUTORIAL -->
     <div class="nav-section">
@@ -97,6 +128,12 @@
         <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
     </div>
 
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_data">Data & APIs</div>
+            <a href="../tutorial/json.html" class="nav-link" data-i18n="nav_json">JSON</a>
+            <a href="../tutorial/api.html" class="nav-link" data-i18n="nav_api">Web APIs</a>
+        </div>
+
     <!-- 2. ADVANCED INTERNALS (Old Modules) -->
     <div class="nav-section">
         <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
@@ -108,12 +145,16 @@
         <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
     </div>
 
-    <div class="nav-section">
+    
+        <div class="nav-section">
+            <div class="nav-title">Oefenen</div>
+            <a href="../project.html" class="nav-link" style="color: #fbbf24; font-weight: bold;">⚡ 30 Projecten</a>
+        </div>
+<div class="nav-section">
         <div class="nav-title" data-i18n="nav_show">Showcase</div>
         <a href="../projects/portfolio.html" class="nav-link"
             style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
-            data-i18n="nav_portfolio">🏆
-            Portfolio</a>
+            data-i18n="nav_portfolio">🏆 Portfolio</a>
     </div>
 </nav>
 
@@ -145,6 +186,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="../js/animations.js"></script>
 </body>
 
 </html>

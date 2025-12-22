@@ -14,12 +14,44 @@
 
     <title>C# Masterclass | Zero to Professional</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/premium.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
 
 </head>
 
@@ -38,16 +70,17 @@
 
     <nav class="sidebar">
         <a href="index.html" class="brand">
-            <span>⚡ C# MASTER</span>
+            <span>C# MASTER</span>
+            <span class="pro-badge">PRO</span>
         </a>
 
         <!-- Language Switcher -->
         <div class="lang-switcher">
-            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
             <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
-            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn"
-                onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
-
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button>
+            <button class="lang-btn" onclick="changeLanguage('zh')" title="Chinese">🇨🇳</button>
+            <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
         </div>
 
         <!-- 1. C# TUTORIAL (New) -->
@@ -103,6 +136,12 @@
             <a href="tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
         </div>
 
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_data">Data & APIs</div>
+            <a href="tutorial/json.html" class="nav-link" data-i18n="nav_json">JSON</a>
+            <a href="tutorial/api.html" class="nav-link" data-i18n="nav_api">Web APIs</a>
+        </div>
+
         <!-- 2. ADVANCED INTERNALS (Old Modules) -->
         <div class="nav-section">
             <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
@@ -115,11 +154,15 @@
         </div>
 
         <div class="nav-section">
+            <div class="nav-title">Oefenen</div>
+            <a href="project.html" class="nav-link" style="color: #fbbf24; font-weight: bold;">🎯 20 Projecten</a>
+        </div>
+
+        <div class="nav-section">
             <div class="nav-title" data-i18n="nav_show">Showcase</div>
             <a href="projects/portfolio.html" class="nav-link"
                 style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
-                data-i18n="nav_portfolio">🏆
-                Portfolio</a>
+                data-i18n="nav_portfolio">🏆 Portfolio</a>
         </div>
     </nav>
 
@@ -128,10 +171,22 @@
         <div class="hero-container hero-full-width">
             <img src="img/hero.png" alt="C# Cyberpunk Background" class="hero-bg" onerror="this.style.display='none'">
             <!-- Fallback if image not found -->
+            <!-- 3D Floating Shapes -->
+            <div class="shape-3d cube"></div>
+            <div class="shape-3d pyramid"></div>
+            <div class="shape-3d sphere"></div>
+
+            <!-- Nano Banana Hero Image (Hidden by default, can be toggled) -->
+            <!-- <img src="img/nano_banana.png" alt="Nano Banana Cyberpunk" class="hero-bg nano-banana-3d" style="opacity: 0.8; object-fit: contain; transform: scale(0.8);"> -->
+
+            <!-- Professional C# Cyberpunk Hero -->
+            <img src="img/hero_cyber.png" alt="C# Future Workspace" class="hero-bg"
+                style="opacity: 0.6; object-fit: cover;">
 
             <div class="hero-content">
-                <div style="font-family: var(--font-mono); color: var(--accent); font-size: 0.9rem; margin-bottom: 20px;"
-                    data-i18n="hero_cmd">
+                <div id="hero-command"
+                    style="font-family: var(--font-mono); color: var(--accent); font-size: 0.9rem; margin-bottom: 20px; cursor: pointer; transition: all 0.3s;"
+                    data-i18n="hero_cmd" title="Open Console">
                     > dotnet new career --level senior
                 </div>
 
@@ -143,6 +198,10 @@
                     data-i18n="hero_desc_html">
                     Vergeet simpele tutorials. Leer hoe C# <strong>fysiek</strong> werkt in het geheugen, van
                     CPU-register tot Garbage Collector.
+                </p>
+                <p style="color: var(--accent); font-weight: 500; font-size: 1.1rem; margin-top: 10px;"
+                    data-i18n="tut_home_p_10">
+                    Gebaseerd op de nieuwste .NET 10 en C# 14 versies en best practices.
                 </p>
 
                 <div style="display: flex; gap: 15px; margin-top: 30px;">
@@ -158,13 +217,14 @@
 
         <div class="content-container">
 
-            <h2 style="border:none; margin-top: 50px;" data-i18n="roadmap_title">Jouw Roadmap</h2>
+            <h2 style="border:none; margin-top: 50px; text-align: left; margin: auto; margin-left: 20px;"
+                data-i18n="roadmap_title">Jouw Roadmap</h2>
             <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 20px;">
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 20px;">
 
                 <!-- Phase 1 -->
                 <div class="exercise-box" style="margin: 0; border-top: 4px solid var(--accent);">
-                    <div style="font-size: 3rem; margin-bottom: 15px; text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);">🧱
+                    <div style="font-size: 3rem; margin-bottom: 15px; text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);">🎯
                     </div>
                     <h3 data-i18n="p1_title">Fase 1: Het Fundament</h3>
                     <p data-i18n="p1_desc">Begrijp de hardware, het geheugen (Stack/Heap) en de.NET runtime.</p>
@@ -181,7 +241,7 @@
                 <!-- Phase 2 -->
                 <div class="exercise-box" style="margin: 0; border-top: 4px solid var(--success);">
                     <div style="font-size: 3rem; margin-bottom: 15px; text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);">
-                        🛠️
+                        ⚡
                     </div>
                     <h3 data-i18n="p2_title">Fase 2: Architectuur</h3>
                     <p data-i18n="p2_desc">Meester het typesysteem, OOP en datastructuren zonder "magie".</p>
@@ -219,8 +279,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/terminal.js"></script>
+    <script src="js/terminal.js?v=210"></script>
     <script src="js/translate.js?v=210"></script> <!-- Force Reload -->
+    <script src="js/visuals.js"></script> <!-- Keep the visuals engine linked -->
+    <script src="js/animations.js"></script>
 </body>
 
 </html>

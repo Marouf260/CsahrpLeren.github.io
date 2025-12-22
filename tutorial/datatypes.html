@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -7,17 +7,50 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://translate.google.com https://translate.googleapis.com; img-src 'self' data: blob: file: https://translate.googleapis.com https://www.gstatic.com;">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C# Data Types | C# Masterclass</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/premium.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@400;700&family=Sarabun:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
 </head>
 
 <body>
@@ -32,169 +65,241 @@
 
     <div id="google_translate_element" style="display:none;"></div>
     <nav class="sidebar">
-    <a href="../index.html" class="brand">
-        <span>⚡ C# MASTER</span>
-    </a>
+        <a href="../index.html" class="brand">
+            <span>⚡ C# MASTER</span>
+        </a>
 
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" data-i18n="btn_nl">🇳🇱</button>
-        <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
-        <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button> <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
-        
-    </div>
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
+            <button class="lang-btn" onclick="changeLanguage('en')" title="English">🇺🇸</button>
+            <button class="lang-btn" onclick="changeLanguage('th')" title="Thai">🇹🇭</button>
+            <button class="lang-btn" onclick="changeLanguage('zh')" title="Chinese">🇨🇳</button>
+            <button class="lang-btn" onclick="changeLanguage('ar')" title="Arabic">🇸🇦</button>
+        </div>
 
-    <!-- 1. C# TUTORIAL -->
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
-        <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
-        <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
-        <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
-        <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
-        <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
-    </div>
+        <!-- 1. C# TUTORIAL -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_home">C# Tutorial</div>
+            <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="../tutorial/intro.html" class="nav-link" data-i18n="nav_intro">C# Intro</a>
+            <a href="../tutorial/get_started.html" class="nav-link" data-i18n="nav_get_started">Get Started</a>
+            <a href="../tutorial/syntax.html" class="nav-link" data-i18n="nav_syntax">C# Syntax</a>
+            <a href="../tutorial/output.html" class="nav-link" data-i18n="nav_output">C# Output</a>
+        </div>
 
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
-        <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
-        <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
-        <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
-        <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
-        <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
-        <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
-        <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
-        <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
-        <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
-        <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
-        <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
-        <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
-        <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
-        <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
-    </div>
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_basics">C# Basics</div>
+            <a href="../tutorial/variables.html" class="nav-link" data-i18n="nav_variables">Variables</a>
+            <a href="../tutorial/datatypes.html" class="nav-link" data-i18n="nav_datatypes">Data Types</a>
+            <a href="../tutorial/casting.html" class="nav-link" data-i18n="nav_casting">Type Casting</a>
+            <a href="../tutorial/user_input.html" class="nav-link" data-i18n="nav_user_input">User Input</a>
+            <a href="../tutorial/operators.html" class="nav-link" data-i18n="nav_operators">Operators</a>
+            <a href="../tutorial/math.html" class="nav-link" data-i18n="nav_math">Math</a>
+            <a href="../tutorial/strings.html" class="nav-link" data-i18n="nav_strings">Strings</a>
+            <a href="../tutorial/booleans.html" class="nav-link" data-i18n="nav_booleans">Booleans</a>
+            <a href="../tutorial/if_else.html" class="nav-link" data-i18n="nav_if_else">If...Else</a>
+            <a href="../tutorial/switch.html" class="nav-link" data-i18n="nav_switch">Switch</a>
+            <a href="../tutorial/while.html" class="nav-link" data-i18n="nav_while">While Loop</a>
+            <a href="../tutorial/for.html" class="nav-link" data-i18n="nav_for">For Loop</a>
+            <a href="../tutorial/break_continue.html" class="nav-link" data-i18n="nav_break">Break/Continue</a>
+            <a href="../tutorial/arrays.html" class="nav-link" data-i18n="nav_arrays">Arrays</a>
+        </div>
 
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
-        <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
-        <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method Parameters</a>
-        <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
-            Overloading</a>
-    </div>
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_methods">C# Methods</div>
+            <a href="../tutorial/methods.html" class="nav-link" data-i18n="nav_methods">Methods</a>
+            <a href="../tutorial/method_parameters.html" class="nav-link" data-i18n="nav_meth_params">Method
+                Parameters</a>
+            <a href="../tutorial/method_overloading.html" class="nav-link" data-i18n="nav_meth_overload">Method
+                Overloading</a>
+        </div>
 
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
-        <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
-        <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
-        <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
-        <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
-        <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
-        <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
-        <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
-        <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
-        <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
-        <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
-        <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
-        <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
-        <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
-    </div>
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_oop">C# Classes</div>
+            <a href="../tutorial/oop.html" class="nav-link" data-i18n="nav_oop">OOP</a>
+            <a href="../tutorial/classes.html" class="nav-link" data-i18n="nav_classes">Classes/Objects</a>
+            <a href="../tutorial/class_members.html" class="nav-link" data-i18n="nav_members">Class Members</a>
+            <a href="../tutorial/constructors.html" class="nav-link" data-i18n="nav_constructors">Constructors</a>
+            <a href="../tutorial/modifiers.html" class="nav-link" data-i18n="nav_modifiers">Access Modifiers</a>
+            <a href="../tutorial/properties.html" class="nav-link" data-i18n="nav_properties">Properties</a>
+            <a href="../tutorial/inheritance.html" class="nav-link" data-i18n="nav_inheritance">Inheritance</a>
+            <a href="../tutorial/polymorphism.html" class="nav-link" data-i18n="nav_polymorphism">Polymorphism</a>
+            <a href="../tutorial/abstraction.html" class="nav-link" data-i18n="nav_abstraction">Abstraction</a>
+            <a href="../tutorial/interfaces.html" class="nav-link" data-i18n="nav_interfaces">Interfaces</a>
+            <a href="../tutorial/enums.html" class="nav-link" data-i18n="nav_enums">Enums</a>
+            <a href="../tutorial/files.html" class="nav-link" data-i18n="nav_files">Files</a>
+            <a href="../tutorial/exceptions.html" class="nav-link" data-i18n="nav_exceptions">Exceptions</a>
+        </div>
 
-    <!-- 2. ADVANCED INTERNALS (Old Modules) -->
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
-        <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
-        <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
-        <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
-        <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
-        <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
-        <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
-    </div>
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_tut_data">Data & APIs</div>
+            <a href="../tutorial/json.html" class="nav-link" data-i18n="nav_json">JSON</a>
+            <a href="../tutorial/api.html" class="nav-link" data-i18n="nav_api">Web APIs</a>
+        </div>
 
-    <div class="nav-section">
-        <div class="nav-title" data-i18n="nav_show">Showcase</div>
-        <a href="../projects/portfolio.html" class="nav-link"
-            style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
-            data-i18n="nav_portfolio">🏆
-            Portfolio</a>
-    </div>
-</nav>
+        <!-- 2. ADVANCED INTERNALS (Old Modules) -->
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_adv_internal">Advanced Internals</div>
+            <a href="../modules/module0.html" class="nav-link" data-i18n="nav_mod0">0. Hardware</a>
+            <a href="../modules/module1.html" class="nav-link" data-i18n="nav_mod1">1. Runtime</a>
+            <a href="../modules/module2.html" class="nav-link" data-i18n="nav_mod2">2. Memory</a>
+            <a href="../modules/module3.html" class="nav-link" data-i18n="nav_mod3">3. Control Flow (IL)</a>
+            <a href="../modules/module4.html" class="nav-link" data-i18n="nav_mod4">4. Stack Frames</a>
+            <a href="../modules/module5.html" class="nav-link" data-i18n="nav_mod5">5. OOP Layout</a>
+        </div>
 
-    <main class="main-content"><div class="content-container">
-        <h1   data-i18n="tut_datatypes_h1_1">C# Data Types</h1>
-        <p   class="lead" data-i18n="tut_datatypes_p_2">C# is static typed. Dit betekent dat je moet weten hoeveel geheugen je nodig hebt.</p>
 
-        <h2   data-i18n="tut_datatypes_h2_3">De Belangrijkste Types</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-            <tr style="border-bottom: 2px solid var(--border);">
-                <th   style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_4">Type</th>
-                <th   style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_5">Grootte</th>
-                <th   style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_6">Beschrijving</th>
-                <th   style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_7">Voorbeeld</th>
-            </tr>
-            <tr>
-                <td style="padding: 10px;"><code>int</code></td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_8">4 bytes</td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_9">Hele getallen (-2M tot +2M)</td>
-                <td style="padding: 10px;"><code>100</code></td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;"><code>double</code></td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_10">8 bytes</td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_11">Kommagetallen (precisie: 15 cijfers)</td>
-                <td style="padding: 10px;"><code>19.99</code></td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;"><code>bool</code></td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_12">1 bit*</td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_13">Waar of Niet Waar</td>
-                <td style="padding: 10px;"><code>true</code></td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;"><code>char</code></td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_14">2 bytes</td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_15">Eén letter (Unicode)</td>
-                <td style="padding: 10px;"><code>'A'</code></td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;"><code>string</code></td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_16">Variabel</td>
-                <td   style="padding: 10px;" data-i18n="tut_datatypes_td_17">Tekst</td>
-                <td style="padding: 10px;"><code>"Hallo"</code></td>
-            </tr>
-        </table>
+        <div class="nav-section">
+            <div class="nav-title">Oefenen</div>
+            <a href="../project.html" class="nav-link" style="color: #fbbf24; font-weight: bold;">⚡ 30 Projecten</a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-title" data-i18n="nav_show">Showcase</div>
+            <a href="../projects/portfolio.html" class="nav-link"
+                style="color: var(--accent); font-weight: bold; background: var(--accent-glow); border: 1px solid rgba(88,166,255,0.2);"
+                data-i18n="nav_portfolio">🏆 Portfolio</a>
+        </div>
+    </nav>
 
-        <h2   data-i18n="tut_datatypes_h2_18">Value vs Reference Types</h2>
-        <p   data-i18n="tut_datatypes_p_19">Dit is cruciaal om te snappen hoe C# werkt.</p>
+    <main class="main-content">
+        <div class="content-container">
+            <h1 data-i18n="tut_datatypes_h1_1">C# Data Types</h1>
+            <p class="lead" data-i18n="tut_datatypes_p_2">C# is static typed. Dit betekent dat je moet weten hoeveel
+                geheugen je nodig hebt.</p>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-            <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 8px;">
-                <h3   data-i18n="tut_datatypes_h3_20">Value Types (Stack)</h3>
-                <p   data-i18n="tut_datatypes_p_21">Simpele types zoals <code>int</code>, <code>double</code>, <code>bool</code>. De waarde zit direct in
-                    de variabele.</p>
+            <h2 data-i18n="tut_datatypes_h2_3">De Belangrijkste Types</h2>
+            <table data-i18n-table="tut_datatypes_table">
+                <tr style="border-bottom: 2px solid var(--glass-border);">
+                    <th style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_4">Type</th>
+                    <th style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_5">Grootte</th>
+                    <th style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_6">Beschrijving</th>
+                    <th style="padding: 10px; text-align: left;" data-i18n="tut_datatypes_th_7">Voorbeeld</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;"><code>int</code></td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_8">4 bytes</td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_9">Hele getallen (-2M tot +2M)</td>
+                    <td style="padding: 10px;"><code>100</code></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;"><code>double</code></td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_10">8 bytes</td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_11">Kommagetallen (precisie: 15 cijfers)</td>
+                    <td style="padding: 10px;"><code>19.99</code></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;"><code>bool</code></td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_12">1 bit*</td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_13">Waar of Niet Waar</td>
+                    <td style="padding: 10px;"><code>true</code></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;"><code>char</code></td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_14">2 bytes</td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_15">EÃ©n letter (Unicode)</td>
+                    <td style="padding: 10px;"><code>'A'</code></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;"><code>string</code></td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_16">Variabel</td>
+                    <td style="padding: 10px;" data-i18n="tut_datatypes_td_17">Tekst</td>
+                    <td style="padding: 10px;"><code>"Hallo"</code></td>
+                </tr>
+            </table>
+
+            <h2 data-i18n="tut_datatypes_h2_18">Value vs Reference Types</h2>
+            <p data-i18n="tut_datatypes_p_19">Dit is cruciaal om te snappen hoe C# werkt.</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 8px;">
+                    <h3 data-i18n="tut_datatypes_h3_20">Value Types (Stack)</h3>
+                    <p data-i18n="tut_datatypes_p_21">Simpele types zoals <code>int</code>, <code>double</code>,
+                        <code>bool</code>. De waarde zit direct in
+                        de variabele.
+                    </p>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 8px;">
+                    <h3 data-i18n="tut_datatypes_h3_22">Reference Types (Heap)</h3>
+                    <p data-i18n="tut_datatypes_p_23">Complexe types zoals <code>string</code>, <code>class</code>,
+                        <code>⚡</code>. De variabele is een
+                        <strong>adreskaartje</strong> naar de data.
+                    </p>
+                </div>
             </div>
-            <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 8px;">
-                <h3   data-i18n="tut_datatypes_h3_22">Reference Types (Heap)</h3>
-                <p   data-i18n="tut_datatypes_p_23">Complexe types zoals <code>string</code>, <code>class</code>, <code>array</code>. De variabele is een
-                    <strong>adreskaartje</strong> naar de data.</p>
+            <p data-i18n="tut_datatypes_p_24"><em>Meer hierover in Module 2: Memory Management.</em></p>
+
+            <!-- NEW CONTENT: Deep Dive -->
+            <h2 data-i18n="tut_datatypes_deep_dive_title">Deep Dive: The Money Trap (`double` vs `decimal`)</h2>
+            <p data-i18n="tut_datatypes_deep_dive_text">
+                Gebruik <strong>nooit</strong> `double` of `float` voor geld! Computers kunnen 0.1 niet perfect opslaan
+                (net zoals wij 1/3 niet perfect kunnen opschrijven).
+                Gebruik altijd `decimal` voor financiÃ«le zaken.
+            </p>
+            <div class="code-compare"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 2rem;">
+                <div class="bad" style="border-left: 4px solid #f87171; padding-left: 1rem;">
+                    <h4 style="color: #f87171;">âŒ Fout (Double)</h4>
+                    <pre><code class="language-csharp">double a = 0.1;
+double b = 0.2;
+Console.WriteLine(a + b); 
+// Output: 0.30000000000000004 🎯</code></pre>
+                </div>
+                <div class="good" style="border-left: 4px solid #4ade80; padding-left: 1rem;">
+                    <h4 style="color: #4ade80;">âœ… Goed (Decimal)</h4>
+                    <pre><code class="language-csharp">decimal a = 0.1m;
+decimal b = 0.2m;
+Console.WriteLine(a + b); 
+// Output: 0.3 🎯</code></pre>
+                </div>
+            </div>
+
+            <!-- NEW CONTENT: Pro Tip -->
+            <div class="callout callout-info">
+                <div class="callout-title" data-i18n="tut_datatypes_pro_tip_title">🎯 Pro Tip: De Suffixes (f, d, m)
+                </div>
+                <div data-i18n="tut_datatypes_pro_tip_text"></div>
+            </div>
+
+            <!-- NEW CONTENT: Extra Assignment -->
+            <div class="exercise-box" style="border-color: var(--accent); margin-top: 20px;">
+                <div class="exercise-title" data-i18n="tut_datatypes_extra_task_title">🎯 Extra Challenge: The Overflow
+                </div>
+                <p data-i18n="tut_datatypes_extra_task_text">
+                    Een `byte` kan maximaal 255 zijn. Wat gebeurt er als je er 1 bij optelt?
+                    Probeer het uit in code!
+                </p>
+                <details>
+                    <summary data-i18n="tut_datatypes_summary_26">Toon Antwoord</summary>
+                    <pre><code class="language-csharp">byte b = 255;
+b++; // Tel er 1 bij op
+Console.WriteLine(b); // Output: 0 🎯</code></pre>
+                    <p>Dit heet <strong>Overflow</strong>. De teller slaat "over de kop" terug naar 0.</p>
+                </details>
+            </div>
+
+            <hr style="border-color: var(--glass-border); margin: 3rem 0;">
+
+            <div class="exercise-box">
+                <div class="exercise-title" data-i18n="tut_datatypes_div_33">🎯  Denkvraag</div>
+                <p data-i18n="tut_datatypes_p_25">Waarom gebruiken we niet altijd <code>double</code> voor alle
+                    getallen?</p>
+                <details>
+                    <summary data-i18n="tut_datatypes_summary_26">Toon Antwoord</summary>
+                    <p style="margin-top: 10px;" data-i18n="tut_datatypes_p_27">1. Performance: double is trager. 2.
+                        Precisie: double kan afrondingsfouten
+                        maken (niet goed voor geld!). 3. Geheugen: double is 2x zo groot als int.</p>
+                </details>
+            </div>
+
+            <div style="margin-top: 40px; display: flex; justify-content: space-between;">
+                <a href="variables.html" class="nav-link">&larr; Variables</a>
+                <a href="casting.html" class="nav-link"
+                    style="background: var(--accent); color: var(--bg-primary); font-weight: bold;">C# Type Casting
+                    &rarr;</a>
             </div>
         </div>
-        <p   data-i18n="tut_datatypes_p_24"><em>Meer hierover in Module 2: Memory Management.</em></p>
-
-        <div class="exercise-box">
-            <div class="exercise-title" data-i18n="tut_datatypes_div_33">🧠 Denkvraag</div>
-            <p   data-i18n="tut_datatypes_p_25">Waarom gebruiken we niet altijd <code>double</code> voor alle getallen?</p>
-            <details>
-                <summary   data-i18n="tut_datatypes_summary_26">Toon Antwoord</summary>
-                <p   style="margin-top: 10px;" data-i18n="tut_datatypes_p_27">1. Performance: double is trager. 2. Precisie: double kan afrondingsfouten
-                    maken (niet goed voor geld!). 3. Geheugen: double is 2x zo groot als int.</p>
-            </details>
-        </div>
-
-        <div style="margin-top: 40px; display: flex; justify-content: space-between;">
-            <a href="variables.html" class="nav-link">&larr; Variables</a>
-            <a href="casting.html" class="nav-link"
-                style="background: var(--accent); color: var(--bg-primary); font-weight: bold;">C# Type Casting
-                &rarr;</a>
-        </div>
-    </div></main>
+    </main>
 
     <script src="../js/translate.js?v=210"></script>
     <script src="../js/main.js"></script>
@@ -202,6 +307,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="../js/animations.js"></script>
 </body>
 
 </html>

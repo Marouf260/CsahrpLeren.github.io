@@ -1,0 +1,301 @@
+/* ========================================
+   PROFESSIONAL ANIMATIONS SYSTEM
+   Advanced animations for premium feel
+   ======================================== */
+
+/* --- SMOOTH SCROLL BEHAVIOR --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- STAGGER FADE IN ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- GLOW PULSE ANIMATION --- */
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 30px var(--accent-neon), 0 0 60px var(--accent-neon);
+    }
+}
+
+/* --- FLOATING ANIMATION --- */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* --- ROTATE 3D ANIMATION --- */
+@keyframes rotate3D {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+/* --- SHIMMER EFFECT --- */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* --- APPLY ANIMATIONS TO ELEMENTS --- */
+
+/* Exercise boxes with stagger */
+.exercise-box {
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.exercise-box:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.exercise-box:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.exercise-box:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.exercise-box:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.exercise-box:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.exercise-box:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Project cards with scale animation */
+.project-card {
+    animation: fadeInScale 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero elements */
+.hero-container h1 {
+    animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards;
+}
+
+.hero-container p {
+    animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s backwards;
+}
+
+.btn-hero {
+    animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s backwards;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button shimmer effect on hover */
+.btn-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: left 0.5s;
+}
+
+.btn-hero:hover::before {
+    left: 100%;
+}
+
+/* Sidebar links slide in */
+.nav-link {
+    animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.nav-link:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.nav-link:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.nav-link:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.nav-link:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+.nav-link:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+/* Code blocks with subtle entrance */
+pre {
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+pre:hover {
+    transform: translateX(5px);
+    box-shadow: -5px 0 20px var(--accent-glow);
+}
+
+/* Callouts and alerts */
+.callout,
+.alert {
+    animation: slideInRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Menu toggle pulse */
+.menu-toggle {
+    animation: fadeInScale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s backwards;
+}
+
+.menu-toggle:hover {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Language buttons */
+.lang-btn {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lang-btn:hover {
+    transform: translateY(-3px) scale(1.15) rotate(5deg);
+}
+
+/* Roadmap phases */
+.content-container>div {
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Background orbs floating */
+.bg-orb {
+    animation: float 8s ease-in-out infinite;
+}
+
+.orb-1 {
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    animation-delay: 2s;
+}
+
+/* Scroll reveal enhancement */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Page load animation */
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: pageLoad 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

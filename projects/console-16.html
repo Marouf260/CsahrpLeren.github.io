@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Project 16: Text Adventure "Go West" | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/premium.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+</head>
+
+<body>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class='menu-toggle' onclick='toggleMobileMenu()' aria-label='Toggle Menu'>
+        <span></span>
+    </button>
+    <div class='sidebar-overlay'></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <nav class="sidebar">
+        <a href="../index.html" class="brand">
+            <span>⚡ C# MASTER</span>
+        </a>
+        <div class="nav-section">
+            <div class="nav-title">Projecten</div>
+            <a href="../project.html" class="nav-link">&larr; Terug naar Overzicht</a>
+            <a href="#" class="nav-link active">16. Text Adventure: Go West</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="hero-container">
+            <h1 class="glitch" data-text="Project 16: Go West">Project 16: Go West</h1>
+            <p class="lead">De ultieme test voor je OOP skills. Implementeer een complete game engine.</p>
+        </div>
+
+        <div class="content-container">
+
+            <div class="exercise-box" style="border: 2px solid #f43f5e; background: rgba(244, 63, 94, 0.05);">
+                <h2>De Missie</h2>
+                <p>Je bouwt een spel dat volledig via tekst werkt. De speler moet navigeren door Rooms (Noord, Oost,
+                    Zuid, West), Items verzamelen in een Backpack, en deze items gebruiken om puzzels op te lossen.</p>
+            </div>
+
+            <div class="theory-box"
+                style="margin-top: 30px; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 8px;">
+                <h3>🎯 Architectuur Tips</h3>
+                <ul>
+                    <li><strong>OOP:</strong> Denk in objecten. Een `Room` is een object. Een `Item` is een object.</li>
+                    <li><strong>Relationships:</strong> Een `Room` heeft 4 eigenschappen (N,E,S,W) die <em>ook</em>
+                        `Room` objecten zijn. Dit is hoe je ze aan elkaar linkt.</li>
+                    <li><strong>Inventory:</strong> De `Player` heeft een `List&lt;Item&gt;` (rugzak).</li>
+                </ul>
+            </div>
+
+            <h2 style="margin-top: 40px;">⚡ ï¸ Challenge</h2>
+            <p>Dit is een expert project. Je krijgt geen code voor de logica, alleen de namen van de Classes die je
+                <em>zou kunnen</em> maken.</p>
+
+            <h2 style="margin-top: 40px;">🎯¸ Blauwdruk</h2>
+            <div class="code-block">
+                <pre><code class="language-csharp">// Voorgestelde Classes (implementatie is aan jou!)
+
+class Item 
+{
+    // Naam, Beschrijving?
+}
+
+class Room 
+{
+    // Title, Description
+    // Koppelingen naar buren (Room North, Room East...)
+    // Lijst met Items die hier op de grond liggen
+}
+
+class Player 
+{
+    // Huidige Locatie (Room)
+    // Inventory (List van Items)
+    
+    // Methodes: Move(), Pickup(), Use(), Look()
+}
+
+class GameEngine
+{
+    // Hierin zet je de wereld op (Link kamers aan elkaar)
+    // En draai je de while-loop voor input
+}
+</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src='../js/main.js'></script>
+    <script src='../js/translate.js?v=210'></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

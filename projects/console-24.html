@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 24: Json Cleaner | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+</head>
+
+<body>
+    <button class='menu-toggle' onclick='toggleMobileMenu()' aria-label='Toggle Menu'>
+        <span></span>
+    </button>
+    <div class='sidebar-overlay'></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <nav class="sidebar">
+        <a href="../index.html" class="brand"><span>⚡ C# MASTER</span></a>
+        <div class="nav-section">
+            <div class="nav-title">Projecten</div>
+            <a href="../project.html" class="nav-link">&larr; Terug</a>
+            <a href="#" class="nav-link active">24. Json Cleaner</a>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="hero-container">
+            <h1 class="glitch" data-text="Project 24: Json Cleaner">Project 24: Json Cleaner</h1>
+            <p class="lead">Fix lelijke data van legacy systemen.</p>
+        </div>
+        <div class="content-container">
+            <div class="exercise-box">
+                <h2>🎯 De Uitdaging</h2>
+                <p>Je krijgt een JSON bestand met vreselijke namen, bijv:
+                    <code>{"usr_nm": "Piet", "bd_yr": 1990}</code>.</p>
+                <p>Jouw taak: Lees dit in naar een nette C# class <code>User</code> met properties <code>UserName</code>
+                    en <code>BirthYear</code> en sla het weer op als "schone" JSON.</p>
+            </div>
+
+            <div class="theory-box"
+                style="margin-top: 30px; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 8px;">
+                <h3>📘 Attributes</h3>
+                <ul>
+                    <li>Gebruik <code>[JsonPropertyName("usr_nm")]</code> boven je C# property.</li>
+                    <li>Dit vertelt de serializer welke vreemde naam bij welke nette property hoort.</li>
+                </ul>
+            </div>
+
+            <h2 style="margin-top: 40px;">🎯 Structuur Hint</h2>
+            <div class="code-block">
+                <pre><code class="language-csharp">using System.Text.Json.Serialization;
+
+class User 
+{
+    [JsonPropertyName("usr_nm")]
+    public string UserName { get; set; }
+
+    [JsonPropertyName("bd_yr")]
+    public int BirthYear { get; set; }
+}
+
+// Lees "dirty.json" -> Deserialize -> Serialize -> Sla op als "clean.json"</code></pre>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src='../js/main.js'></script>
+    <script src='../js/translate.js?v=210'></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

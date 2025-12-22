@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4: Converter | C# Masterclass</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/img/preview_social.jpg?v=3">
+
+
+    <!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="C# Masterclass | Zero to Hero">
+    <meta property="og:description" content="Leer C# bouwen met premium tutorials en 30+ projecten. Van Console tot API's.">
+    <meta property="og:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marouf260.github.io/csahrpLerenLeren.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C# Masterclass">
+    <meta name="twitter:description" content="Word een C# pro met interactieve lessen.">
+    <meta name="twitter:image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="C# Masterclass">
+    <meta itemprop="description" content="Leer C# bouwen met premium tutorials.">
+    <meta itemprop="image" content="https://marouf260.github.io/csahrpLerenLeren.github.io/social.jpg">
+
+</head>
+
+<body>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class='menu-toggle' onclick='toggleMobileMenu()' aria-label='Toggle Menu'>
+        <span></span>
+    </button>
+    <div class='sidebar-overlay'></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <nav class="sidebar">
+        <a href="../index.html" class="brand"><span>⚡ C# MASTER</span></a>
+        <div class="nav-section">
+            <div class="nav-title">Projecten</div>
+            <a href="../project.html" class="nav-link">&larr; Terug</a>
+            <a href="#" class="nav-link active">4. Converter</a>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="hero-container">
+            <h1 class="glitch" data-text="Project 4: Temp Converter">Project 4: Temp Converter</h1>
+            <p class="lead">Wiskundige formules omzetten naar code.</p>
+        </div>
+        <div class="content-container">
+            <div class="exercise-box">
+                <h2>🎯 De Uitdaging</h2>
+                <p>Maak een tool die temperaturen omrekent van Celcius naar Fahrenheit.</p>
+                <p style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 4px; font-family: monospace;">
+                    Formule: F = (C Ã— 1.8) + 32</p>
+            </div>
+
+            <div class="theory-box"
+                style="margin-top: 30px; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 8px;">
+                <h3>📘 Onderzoekstips</h3>
+                <ul>
+                    <li>Gebruik geen `int` maar `double`! Temperatuur heeft vaak komma's.</li>
+                    <li>Let op met delen: `9 / 5` is in C# `1` (geheel getal). `9.0 / 5.0` is `1.8`.</li>
+                </ul>
+            </div>
+
+            <h2 style="margin-top: 40px;">🎯 Structuur Hint</h2>
+            <div class="code-block">
+                <pre><code class="language-csharp">using System;
+
+namespace Converter
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1. Vraag om Celcius input
+            
+            // 2. Converteer naar double
+            
+            // 3. Pas de formule toe
+            
+            // 4. Print het resultaat (Tip: gebruik String Interpolation $)
+        }
+    }
+}</code></pre>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src='../js/main.js'></script>
+    <script src='../js/translate.js?v=210'></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>
